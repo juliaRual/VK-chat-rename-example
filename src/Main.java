@@ -18,7 +18,7 @@ class Main {
         System.out.println("Enter new title: ");
         String title = input.nextLine();
 
-        title = title.replace(" ", "+");
+        title = title.replace(" ", "+"); //if name include spaces
 
         URL url = new URL("https://api.vk.com/method/messages.editChat?chat_id=" + chat_id + "&title=" + title + "&access_token=" + token + "&v=5.131");
         HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
